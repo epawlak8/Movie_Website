@@ -129,10 +129,10 @@ movie_tile_content = '''
 '''
 
 
-def create_movie_tiles_content(movies):
+def create_movie_tiles_content(movies, tv_shows):
     # The HTML content for this section of the page
     content = ''
-    for movie in movies:
+    for movie in movies or tv_shows:
         # Extract the youtube ID from the url
         youtube_id_match = re.search(
             r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
@@ -150,13 +150,13 @@ def create_movie_tiles_content(movies):
     return content
 
 
-def open_movies_page(movies):
+def open_movies_page(movies, tv_shows):
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
 
     # Replace the movie tiles placeholder generated content
     rendered_content = main_page_content.format(
-        movie_tiles=create_movie_tiles_content(movies))
+        movie_tiles=create_movie_tiles_content(movies, tv_shows))
 
     # Output the file
     output_file.write(main_page_head + rendered_content)

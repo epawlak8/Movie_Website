@@ -20,8 +20,9 @@ jurassic_park = media.Movie('Jurassic Park',
 #avatar.show_trailer()
 
 movies = [toy_story, avatar, jurassic_park]
+tv_shows = [toy_story]
 
 #print media.Movie.__doc__
 #print media.Movie.__name__
 #print media.Movie.__module__
-fresh_tomatoes.open_movies_page(movies)
+fresh_tomatoes.open_movies_page(movies, tv_shows)
