@@ -1,12 +1,15 @@
 import media
 import fresh_tomatoes
 
+'''The data below is a list of movies and TV shows to be imported into
+fresh_tomatoes.py to generate a dynamic webpage. The data calls a class from
+media.py which is imported above, along with fresh_tomatoes.py to pass data
+to fresh_tomatoes.py'''
 toy_story = media.Movie(
 'Toy Story',
 'A story of a boy and his toys that come to life',
 'https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg',
 'https://www.youtube.com/watch?v=KYz2wyBy3kc')
-#print toy_story.storyline
 
 avatar = media.Movie(
 'Avatar',
@@ -39,8 +42,6 @@ arrival = media.Movie(
 with their occupants''',
 'https://goo.gl/cBJ4hP',
 'https://www.youtube.com/watch?v=tFMo3UJ4B4g')
-#print avatar.storyline
-#avatar.show_trailer()
 
 rick_and_morty = media.Movie(
 'Rick and Morty',
@@ -62,12 +63,14 @@ system from heading toward all-out war.''',
 'https://goo.gl/2nzDAi',
 'https://www.youtube.com/watch?v=_vPLC2xKGTs')
 
+
+# The data above is turned into lists below
 movies = [toy_story, avatar, jurassic_park, saving_private_ryan, dunkirk,
 arrival]
 
 tv_shows = [rick_and_morty, archer, the_expanse]
 
-#print media.Movie.__doc__
-#print media.Movie.__name__
-#print media.Movie.__module__
+
+'''The above lists are now passed into a function from from fresh_tomatoes.py
+to generate a dynamic webpage'''
 fresh_tomatoes.open_movies_page(movies, tv_shows)
