@@ -66,7 +66,7 @@ system from heading toward all-out war.''',
 
 # The data above is turned into lists below
 movies = [toy_story, avatar, jurassic_park, saving_private_ryan, dunkirk,
-arrival]
+          arrival]
 
 tv_shows = [rick_and_morty, archer, the_expanse]
 
