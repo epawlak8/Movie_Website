@@ -1,6 +1,6 @@
 # Movie_Website
 
-A movie website that is dynamically generated from python scripts and data lists. Created for Udacity Courses
+A movie website that is dynamically generated from python scripts and data lists.
 
 
 GETTING STARTED:
